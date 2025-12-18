@@ -3,7 +3,7 @@ library(ggplot2)
 library(klaR)
 library(readxl)
 
-df <- read_excel("C:/Users/bharg/Downloads/premier_league_team_sponsors_2025_2026.xlsx")
+df <- read_excel("premier_league_team_sponsors_2025_2026.xlsx")
 
 #Filter to only team sponsors (remove Premier League-wide sponsors)
 teams_df <- df[df$Team != "Premier League", ]
@@ -241,6 +241,7 @@ p <- ggplot(results_with_position,
     panel.grid.minor = element_blank(),
     panel.border = element_rect(color = "black", fill = NA, size = 1)
   ) 
+
 
 
 print(p)
