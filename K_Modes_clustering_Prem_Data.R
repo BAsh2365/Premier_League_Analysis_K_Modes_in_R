@@ -1,6 +1,7 @@
+#Author: Bhargav Ashok (Use of Claude 4.5 sonnet)
 library(dplyr)
 library(ggplot2)
-library(klaR)
+library(klaR) #K modes clustering library is right here!
 library(readxl)
 
 df <- read_excel("premier_league_team_sponsors_2025_2026.xlsx")
@@ -241,4 +242,5 @@ p <- ggplot(results_with_position,
 
 
 print(p)
+
 
