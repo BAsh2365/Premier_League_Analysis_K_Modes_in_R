@@ -66,7 +66,7 @@ for (team in team_list) {
   Airlines <- c(Airlines, airlines_status)
 }
 
-#Create results data frame
+
 results <- data.frame(
   Team = Team,
   Gambling = Gambling,
@@ -79,7 +79,7 @@ results <- data.frame(
   stringsAsFactors = FALSE
 )
 
-print("=== YOUR DATA FOR CLUSTERING ===")
+
 print(results)
 
 #Prepare clustering data (select features and convert to factors)
@@ -104,14 +104,10 @@ print(table(results$Cluster))
 # Convert cluster to factor for better plotting
 results$Cluster <- as.factor(results$Cluster)
 
-
-cluster_colors <- c("#FF6B6B", "#4ECDC4", "#95E1D3")
-
-
-
-
 # Prepare data for industry breakdown
 industry_summary <- data.frame()
+
+cluster_colors <- c("#FF6B6B", "#4ECDC4", "#95E1D3")
 
 for (i in 1:3) {
   cluster_subset <- results[results$Cluster == i, ]
@@ -245,3 +241,4 @@ p <- ggplot(results_with_position,
 
 
 print(p)
+
